@@ -1,10 +1,11 @@
 {
-  // Name this configuration
-  "name": "Codespace for Skills!",
-  // Use the base codespace image
-  "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
-
+  "name": "My Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "remoteUser": "codespace",
   "overrideCommand": false ,
-  "postCreateCommand": "echo '# Writing code upon codespace creation!'  >> codespace.md"
+  "settings": {},
+  "extensions": [],
+  "postCreateCommand": "bash .devcontainer/setup-dotfiles.sh"
 }
